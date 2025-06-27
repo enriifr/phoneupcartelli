@@ -25,7 +25,9 @@ let phoneData = [];
       IS_DUAL_SIM,
       IS_LTE,
       IS_WIFI,
-      RAM_SIZE
+      RAM_SIZE,
+      RESOLUTION,
+      SCREEN_SIZE
     } = result;
 
     const printableContent = `
@@ -107,7 +109,7 @@ let phoneData = [];
                                 <td style="vertical-align: middle;">
                                     <div style="display: flex; align-items: center;">
                                         <img src="scr.png" alt="" style="width: 70px; margin-right: 10px;">
-                                        <span>dimenticato di nuovo...</span>
+                                        <span>%{SCREEN_SIZE}<br>%{RESOLUTION}</span>
                                     </div>
                                 </td>
                             </tr>
