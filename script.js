@@ -161,6 +161,80 @@ let phoneData = [];
                     <h1 style="font-family: bold;">€XXX,XX</h1>
                 </div>
             </div>
+            <div class="mainhalf">
+                <img src="phoneup.png" alt="">
+                <div style="border-radius: 2px;border-color: skyblue;border-style: dashed;text-align: center;width: 40vw;font-family: bold;">
+                    <h1>${BRAND}</h1>
+                    <h1>${MODEL_NAME}</h1>
+                    <h1>STATO</h1>
+                </div>
+                <div style="border-radius: 2px;border-color: skyblue;border-style: dashed;text-align: center;width: 40vw;height:40vh;margin-top: 30px;font-family: norm;">
+                    <table style="width: 100%;height: 80%;padding: 10px;">
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="stor.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${STORAGE}</span>
+                                    </div>
+                                </td>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="scr.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>dimenticato di nuovo...</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="camera.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${MAIN_CAMERA_MP} MP</span>
+                                    </div>
+                                </td>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="bat.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>mi sono dimenticato...</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="video.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${VIDEO_QUALITY}</span>
+                                    </div>
+                                </td>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="sim.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${CONNECTIVITY}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="cpu.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${CHIP_STRUCTURE}</span>
+                                    </div>
+                                </td>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="ram.jpg" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${RAM_SIZE}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h1 style="font-family: light;">classe energ</h1>
+                </div>
+                <div class="pricebox" style="border-radius: 2px;border-color: skyblue;border-style: solid;text-align: center;width: 40vw;background-color: skyblue;padding-top: 30px;padding-bottom: 30px;margin-top: -4px;">
+                    <h1 style="font-family: bold;">€XXX,XX</h1>
+                </div>
+            </div>
         </body>
     </html>
     `;
