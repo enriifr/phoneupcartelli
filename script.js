@@ -30,33 +30,139 @@ let phoneData = [];
 
     const printableContent = `
       <html>
-      <head>
-        <title>${MODEL_NAME} - Scheda Tecnica</title>
-        <style>
-          body { font-family: Arial, sans-serif; padding: 2rem; }
-          h1 { border-bottom: 1px solid #ccc; }
-          .info { margin-top: 1rem; }
-          .info strong { display: inline-block; width: 150px; }
-        </style>
-      </head>
-      <body>
-        <h1>${MODEL_NAME}</h1>
-        <div class="info"><strong>Model No:</strong> ${MODEL_NO}</div>
-        <div class="info"><strong>Brand:</strong> ${BRAND}</div>
-        <div class="info"><strong>Chip:</strong> ${CHIP_STRUCTURE}</div>
-        <div class="info"><strong>Camera:</strong> ${MAIN_CAMERA_MP} MP</div>
-        <div class="info"><strong>Video Quality:</strong> ${VIDEO_QUALITY}</div>
-        <div class="info"><strong>Storage:</strong> ${STORAGE.join(', ')}</div>
-        <div class="info"><strong>Connectivity:</strong> ${CONNECTIVITY.join(', ')}</div>
-        <div class="info"><strong>Dual SIM:</strong> ${IS_DUAL_SIM ? 'Yes' : 'No'}</div>
-        <div class="info"><strong>LTE:</strong> ${IS_LTE ? 'Yes' : 'No'}</div>
-        <div class="info"><strong>WiFi:</strong> ${IS_WIFI ? 'Yes' : 'No'}</div>
-        <div class="info"><strong>RAM:</strong> ${RAM_SIZE}</div>
-        <script>
-          window.onload = () => { window.print(); };
-        </script>
-      </body>
-      </html>
+        <head>
+            <style>
+                html{
+                    overflow: hidden;
+                }
+                .mainhalf{
+                    width: 50vw;
+                    height: 100vh;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                h1{
+                    margin: 0;
+                }
+                .pricebox{
+                    -webkit-print-color-adjust: exact;
+                }
+                @media print {
+                    body {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .price-box {
+                        page-break-inside: avoid;
+                        page-break-before: avoid;
+                        page-break-after: avoid;
+                        -webkit-print-color-adjust: exact;
+                        print-color-adjust: exact;
+                    }
+                }
+
+                @font-face {
+                    font-family: "norm";
+                    src: url("fonts/Outfit-Regular.ttf") format("truetype");
+                    font-weight: 400; 
+                    font-style: normal;
+                }
+
+                @font-face {
+                    font-family: "light";
+                    src: url("fonts/Outfit-ExtraLight.ttf") format("truetype");
+                    font-weight: 100;
+                    font-style: normal;
+                }
+
+                @font-face {
+                    font-family: "bold";
+                    src: url("fonts/Outfit-SemiBold.ttf") format("truetype");
+                    font-weight: 700;
+                    font-style: normal;
+                }
+            </style>
+        </head>
+        <body style="display: inline-flex;">
+            <div class="mainhalf">
+                <img src="phoneup.png" alt="">
+                <div style="border-radius: 2px;border-color: skyblue;border-style: dashed;text-align: center;width: 40vw;font-family: bold;">
+                    <h1>${BRAND}</h1>
+                    <h1>${MODEL_NAME}</h1>
+                    <h1>STATO</h1>
+                </div>
+                <div style="border-radius: 2px;border-color: skyblue;border-style: dashed;text-align: center;width: 40vw;height:40vh;margin-top: 30px;font-family: norm;">
+                    <table style="width: 100%;height: 80%;padding: 10px;">
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="stor.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${STORAGE}</span>
+                                    </div>
+                                </td>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="scr.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>Row 1, Column 1</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="camera.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${MAIN_CAMERA_MP}</span>
+                                    </div>
+                                </td>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="bat.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${BATTERY}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="video.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${VIDEO_QUALITY}</span>
+                                    </div>
+                                </td>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="sim.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${CONNECTIVITY}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="cpu.png" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${CHIP_STRUCTURE}</span>
+                                    </div>
+                                </td>
+                                <td style="vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="ram.jpg" alt="" style="width: 70px; margin-right: 10px;">
+                                        <span>${RAM_SIZE}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h1 style="font-family: light;">classe energ</h1>
+                </div>
+                <div class="pricebox" style="border-radius: 2px;border-color: skyblue;border-style: solid;text-align: center;width: 40vw;background-color: skyblue;padding-top: 30px;padding-bottom: 30px;margin-top: -4px;">
+                    <h1 style="font-family: bold;">€XXX,XX</h1>
+                </div>
+            </div>
+        </body>
+    </html>
     `;
 
     const printWindow = window.open('', '_blank');
