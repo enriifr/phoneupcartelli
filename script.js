@@ -121,7 +121,7 @@ let phoneData = [];
                                 <td style="vertical-align: middle;">
                                     <div style="display: flex; align-items: center;">
                                         <img src="bat.png" alt="" style="width: 70px; margin-right: 10px;">
-                                        <span>${BATTERY}</span>
+                                        <span>mi sono dimenticato...</span>
                                     </div>
                                 </td>
                             </tr>
