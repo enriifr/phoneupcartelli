@@ -115,7 +115,7 @@ let phoneData = [];
                                 <td style="vertical-align: middle;">
                                     <div style="display: flex; align-items: center;">
                                         <img src="camera.png" alt="" style="width: 70px; margin-right: 10px;">
-                                        <span>${MAIN_CAMERA_MP}</span>
+                                        <span>${MAIN_CAMERA_MP} MP</span>
                                     </div>
                                 </td>
                                 <td style="vertical-align: middle;">
